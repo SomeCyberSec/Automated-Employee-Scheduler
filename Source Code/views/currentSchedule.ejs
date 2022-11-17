@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Current Schedule</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/schedule.css' />
+  </head>
+
+  <style>
+    /* Everything below here involves the layout of the schedule. It should
+      be easy to transfer over for the most part. I used vh and vw units
+      because they configure to the screen size. It makes it modular. */
+    /* ---------------------------------------- */
+    .card.second {
+      display: inline-block;
+      text-align: center;
+      width: 65vw;
+      margin-top: 14vh;
+      height: 65vh;
+      background-color: white;
+      overflow-y: scroll;
+      border: 3px solid black;
+    }
+
+    .scheduleTable {
+      border: none;
+      border-collapse: collapse;
+      table-layout: fixed;
+      width: 100%;
+      height: 100%;
+    }
+
+    .scheduleTable td {
+      border: 1px solid black;
+      overflow: hidden;
+    }
+
+    #employee {
+      display: fixed;
+      height: 70px;
+    }
+
+    #days, #dates {
+      display: fixed;
+      height: 40px;
+    }
+
+    #blankDate {
+      border-top: transparent;
+    }
+
+    #blankDay {
+      border-bottom: transparent;
+    }
+
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1; 
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: #888; 
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555; 
+    }
+    /* ---------------------------------------- */
+  </style>
+  <body>
+    <div class="leftcolumn"><%- include('./menu'); -%> </div>
+    <div class="rightcolumn">
+        <h1>Current Schedule</h1>
+
+        <div class="container">
+            <div class="timetable-img text-center">
+                <img src="img/content/timetable.png" alt="">
+            </div>
+            <div class="table-responsive">
+                <table class="table table-bordered text-center">
+                    <thead>
+                        <tr class="bg-light-gray">
+                            <th class="text-uppercase">Employee</th>
+                            <th class="text-uppercase">Sunday</th>
+                            <th class="text-uppercase">Monday</th>
+                            <th class="text-uppercase">Tuesday</th>
+                            <th class="text-uppercase">Wednesday</th>
+                            <th class="text-uppercase">Thursday</th>
+                            <th class="text-uppercase">Friday</th>
+                            <th class="text-uppercase">Saturday</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% data.forEach(function(item) { %>
+                        <tr>
+                            <td class="align-middle">
+                                <%- item.employee.name %> 
+                                <br> 
+                                <%- item.employee.eid %> 
+                            </td>
+                            <% for(let i = 0; i < 7; i++) { %>
+                                <td class="align-middle">
+                                    <% for (let j = 0; j < item.shifts.length; j++) { %>
+                                        <% if (item.shifts[j].day == i) { %>
+                                            <div class="font-size13 text-light-gray"><%- item.employee.epos %></div> 
+                                            <span class="bg-lightred padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">
+                                                <%= item.shifts[j].schedule %>
+                                            </span>
+                                        <% } %>
+                                    <% } %>
+                                </td>
+                            <% } %>
+                        </tr>
+                        <% }) %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>

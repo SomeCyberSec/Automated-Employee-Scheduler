@@ -1,0 +1,19 @@
+[Employee | -firstName: string; -lastName string; -employeeID : int; -position: string; -availability : Pair\<Time, Time\>［］［］; -preference : Pair\<Time, Time\>［］［］; -onShift : bool; | +getPosition() : string; +getAvailability(Date day) : Pair\<Time, Time\>; +setAvailability(int day, Pair(Time, Time)); +getPreference(int day, int shift) : bool; +setPreference(int day, Pair(Time, Time)); +getOnShift() : bool; +setOnShift(); +getPosition: string; +setPosition(); +getTimeOffRequests() : Date［］; +setTimeOffRequest(Date); +getSchedule() : Schedule; +getOnShift() : bool; +setOnShift(bool); +getPosition() : string; +setPosition(string); +worksOnDay(Date) : Shift［］;]
+
+[Shift | -date: Date; -times : Pair\<Time, Time\>; -staffingRequirements: Pair\<string, int\>［］; -timeOffRequests : Employee［］; -staffing: Employee［］; -clockTimes : Tuple\<Employee, Time, Time\>; | +Shift(Date, Pair\<string, int\>) : Shift;+getStaffing() : Employee［］; +setStaffing(Employee［］);]
+
+[User | -userName : string; -password: string; -Employee thisEmployee; myPermissions : Permissions; | getPermissions : Permissions; setPermissions(bool［］);]
+
+[Administrator | +createSchedule() : Schedule; +editAvailability(Employee, Pair(Time, Time), dayIndex); -overwriteSchedule(Schedule) : Schedule]
+
+[Schedule | -schedule : Shift［］; | +Schedule(Date, Date); getSchedule() : Shift［］]
+
+[Administrator | thisUser : User; | +setSchedule(); +editAvailability(Employee);]^[User | -userName : string; -password: string; -Employee thisEmployee; myPermissions : Permissions; | getPermissions : Permissions; setPermissions(bool［］);]
+
+
+
+[Schedule | -schedule : Shift［］; timeOffRequests: Pair<employee, date>［］| +Schedule(Date start, Date end); getSchedule() : Schedule]<-++[Shift | -date: Date; -times : Pair\<Time, Time\>; -staffingRequirements: Pair\<string, int\>［］; -timeOffRequests : Employee［］; -staffing: Employee［］; -clockTimes : Tuple\<Employee, Time, Time\>; | +Shift(Date, Pair\<string, int\>) : Shift;+getStaffing() : Employee［］; +setStaffing(Employee［］);]
+
+[Administrator | thisUser : User; | +setSchedule(); +editAvailability(Employee);]->[Schedule | -schedule : Shift［］; timeOffRequests: Pair<employee, date>［］| +Schedule(Date start, Date end); getSchedule() : Schedule]
+
+[User | -userName : string; -password: string; -Employee thisEmployee; myPermissions : Permissions; | getPermissions : Permissions; setPermissions(bool［］);]<>->[Employee | -firstName: string; -lastName string; -employeeID : int; -position: string; -availability : Pair\<Time, Time\>［］［］; -preference : Pair\<Time, Time\>［］［］; -onShift : bool; | +getPosition() : string; +getAvailability(Date day) : Pair\<Time, Time\>; +setAvailability(int day, int shift); +getPreference(int day, int shift) : bool; +setPreference(int day, int shift); +getOnShift() : bool; +setOnShift(); +getPosition: string; +setPosition();]->[Schedule | -schedule : Shift［］; timeOffRequests: Pair<employee, date>［］| +Schedule(Date start, Date end); getSchedule() : Schedule]
