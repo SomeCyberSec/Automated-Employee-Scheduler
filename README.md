@@ -107,8 +107,13 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <!-- CONTACT -->
 ## Contact
+*emails not included to avoid email skimming
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Andrew Santa
+Ashton
+Ken Miller
+Nathan Brannan - [Linked-in] https://www.linkedin.com/in/nathan-brannan-38435318b/
+Zifeng Yuan
 
 Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
 
