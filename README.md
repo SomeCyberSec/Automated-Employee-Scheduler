@@ -59,8 +59,6 @@ The general purpose of this project is to create a scheduler that automatically 
 - [x] Generate schedule using algorithm
 - [ ] Add Secure Login & Account Creation
 - [ ] Create admin & employee UI
-- [ ] Add 
-- [ ] Add "components" document to easily copy & paste sections of the readme
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -70,11 +68,11 @@ The general purpose of this project is to create a scheduler that automatically 
 ## Contact
 *emails not included to avoid email skimming
 
-Andrew Santa
-Ashton
-Ken Mills
-Nathan Brannan - [Linked-in] https://www.linkedin.com/in/nathan-brannan-38435318b/
-Zifeng Yuan
+Andrew Santa  
+Ashton  
+Ken Mills  
+Nathan Brannan - [Linked-in] https://www.linkedin.com/in/nathan-brannan-38435318b/  
+Zifeng Yuan  
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
