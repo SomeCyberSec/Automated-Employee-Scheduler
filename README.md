@@ -1,13 +1,4 @@
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-
-
+<a name="readme-top"></a>
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -20,8 +11,7 @@
       </ul>
     </li>
     <!-- <li><a href="#roadmap">Roadmap</a></li> If roadmap is added, uncomment this -->
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#contact">Contributors Contact Info</a></li>
   </ol>
 </details>
 
@@ -76,27 +66,7 @@ The general purpose of this project is to create a scheduler that automatically 
 
 
 
-<!-- CONTRIBUTING -->
-## Contributing
-*see contact info for Linkedin accounts provided
-
-Andrew Santa
-Ashton Carruthers
-Ken Mills
-Nathan Brannan
-Zifeng Yuan
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- CONTACT -->
+<!-- CONTRIBUTORS CONTACT INFO -->
 ## Contact
 *emails not included to avoid email skimming
 
